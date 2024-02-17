@@ -7,11 +7,11 @@ def main():
 
     def print_chat(chat_df):
         chat = chat_df.chat.iloc[0]
-        print("Chat {}:\n".format(chat))
+        print("\nChat {}:".format(chat))
 
         def print_user(user_df):
             user = user_df.user.iloc[0]
-            print("\tMessages by user {}:\n".format(user))
+            print("\n\tMessages by user {}:\n".format(user))
 
             for i,message in user_df.iterrows():
                 reaction_df = reactions_df[(reactions_df.chat==chat)&(reactions_df.user==user)&(reactions_df.message==message.message)]
